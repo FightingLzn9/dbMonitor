@@ -1,0 +1,53 @@
+/* sql-result.css */
+.sql-result {
+    -fx-font-family: 'Consolas', 'Monaco', monospace;
+    -fx-font-size: 13px;
+    -fx-text-fill: #333333;
+    -fx-background-color: #f8f8f8;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 3px;
+    -fx-padding: 5px;
+}
+
+.sql-header {
+    -fx-fill: #2c3e50;
+    -fx-font-weight: bold;
+}
+
+.sql-code {
+    -fx-fill: #2980b9;
+    -fx-font-style: italic;
+}
+
+.sql-value {
+    -fx-fill: #27ae60;
+}
+
+.sql-error-header {
+    -fx-fill: #c0392b;
+    -fx-font-weight: bold;
+}
+
+.sql-error-message {
+    -fx-fill: #e74c3c;
+}
+
+.sql-column-header {
+    -fx-fill: white;
+    -fx-font-weight: bold;
+    -rtfx-background-color: #34495e;
+}
+
+.sql-divider {
+    -fx-fill: #95a5a6;
+}
+
+.sql-row-even {
+    -fx-fill: #333333;
+    -rtfx-background-color: #f8f8f8;
+}
+
+.sql-row-odd {
+    -fx-fill: #333333;
+    -rtfx-background-color: #ecf0f1;
+}

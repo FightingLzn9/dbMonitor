@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="VBoxMain" prefHeight="650.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ning.Controller.mainViewController">
+  <children>
+    <MenuBar fx:id="MenuBar" VBox.vgrow="NEVER">
+      <menus>
+        <Menu fx:id="menu_New" mnemonicParsing="false" text="数据库类型">
+          <items>
+            <MenuItem fx:id="mi_mysql" mnemonicParsing="false" text="mysql" />
+            <MenuItem fx:id="mi_mssql" mnemonicParsing="false" text="mssql" />
+          </items>
+        </Menu>
+        <Menu fx:id="menu_Proxy" mnemonicParsing="false" text="代理">
+          <items>
+            <MenuItem fx:id="mi_httpProxy" mnemonicParsing="false" text="HTTP" />
+            <MenuItem fx:id="mi_socksProxy" mnemonicParsing="false" text="Socks5" />
+          </items>
+        </Menu>
+        <Menu fx:id="menu_About" mnemonicParsing="false" text="关于">
+          <items>
+            <MenuItem fx:id="mi_Version" mnemonicParsing="false" text="版本" />
+                  <MenuItem fx:id="mi_Author" mnemonicParsing="false" text="作者" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="387.0" prefWidth="650.0" VBox.vgrow="ALWAYS">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="Host：">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="171.0" layoutY="14.0" text="Port：">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tf_Host" layoutX="56.0" layoutY="12.0" prefHeight="23.0" prefWidth="106.0" text="127.0.0.1" />
+            <TextField fx:id="tf_Port" layoutX="210.0" layoutY="12.0" prefHeight="23.0" prefWidth="52.0" text="3306" />
+            <Label layoutX="279.0" layoutY="14.0" text="User：">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tf_User" layoutX="320.0" layoutY="12.0" prefHeight="15.0" prefWidth="94.0" text="root" />
+            <Label layoutX="427.0" layoutY="14.0" text="Pass：">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="tf_Pass" layoutX="468.0" layoutY="12.0" prefHeight="15.0" prefWidth="94.0" text="root" />
+            <Button fx:id="bu_Con" layoutX="589.0" layoutY="10.0" mnemonicParsing="false" text="数据库连接">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="bu_Update" layoutX="693.0" layoutY="10.0" mnemonicParsing="false" text="数据库更新">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <TabPane fx:id="tp_Main" layoutX="2.0" layoutY="48.0" prefHeight="540.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab fx:id="tb_sqlMonitor" text="SQL监视">
+                     <content>
+                        <TableView fx:id="tbv_SqlMonitor" prefHeight="200.0" prefWidth="200.0">
+                          <columns>
+                            <TableColumn fx:id="tbc_ID" prefWidth="75.0" text="ID" />
+                            <TableColumn fx:id="tbc_DATE" prefWidth="161.5999755859375" text="DATE" />
+                              <TableColumn fx:id="tbc_SQL" prefWidth="563.9999847412109" text="SQL" />
+                          </columns>
+                        </TableView>
+                     </content></Tab>
+                <Tab fx:id="tb_sqlExecute" text="SQL执行">
+                     <content>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="14.0" layoutY="19.0" prefHeight="49.0" prefWidth="52.0" text="sql&gt;">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="tf_Sql" layoutX="66.0" layoutY="27.0" prefHeight="34.0" prefWidth="590.0" text="select user();">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextField>
+                              <Button fx:id="bu_Exec" layoutX="676.0" layoutY="27.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="83.0" text="执行">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Button>
+                              <TextArea fx:id="ta_Log" layoutX="64.0" layoutY="107.0" prefHeight="401.0" prefWidth="590.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextArea>
+                              <Label layoutX="14.0" layoutY="107.0" text="log&gt;">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </content></Tab>
+                  <Tab text="xp_cmdshell" fx:id="xpCmdshellTab">
+                      <content>
+                          <fx:include source="xpcmdshell-terminal.fxml" />
+                      </content>
+                  </Tab>
+                  <Tab fx:id="tb_udf" text="UDF提权" />
+                  <Tab fx:id="clr_CS" text="CLR上线CS">
+                     <content>
+                         <fx:include source="gotocs.fxml" />
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+            <Label fx:id="lb_State" layoutX="582.0" layoutY="602.0" prefHeight="15.0" prefWidth="210.0" />
+            <Label fx:id="lb_dbNowName" layoutX="14.0" layoutY="602.0" prefHeight="15.0" prefWidth="124.0" />
+         </children></AnchorPane>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+  </children>
+</VBox>

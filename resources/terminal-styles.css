@@ -1,0 +1,29 @@
+/* 终端主容器 */
+.terminal-container {
+    -fx-background-color: #1e1e1e;
+    -fx-border-color: #00aa00;
+    -fx-border-width: 1px;
+    -fx-border-radius: 3px;
+    -fx-padding: 5px;
+}
+
+/* 终端输出区域 */
+.terminal-output {
+    -fx-text-fill: #00ff00;
+    -fx-control-inner-background: #1e1e1e;
+    -fx-border-color: #004400;
+    -fx-border-radius: 2px;
+}
+
+/* 命令输入框 */
+.terminal-input {
+    -fx-text-fill: #00ff00;
+    -fx-background-color: #1e1e1e;
+    -fx-border-color: #004400;
+    -fx-prompt-text-fill: #007700;
+}
+
+/* 提示符标签 */
+.prompt-label {
+    -fx-text-fill: #00ff00;
+}

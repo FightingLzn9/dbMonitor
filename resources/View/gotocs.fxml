@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="200.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ning.Controller.clrController">
+    <TextArea fx:id="ta_CS" layoutX="14.0" layoutY="35.0" prefHeight="34.0" prefWidth="771.0" text="绕过360、火绒、WindowsDefender上线CS，这里放入CS生成的payload.bin文件路径,点击一键上线CS即可。" />
+    <Button fx:id="button_CS" layoutX="269.0" layoutY="362.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="188.0" text="一键上线CS！GO!" />
+   <TextArea fx:id="ta_csContent" layoutX="9.0" layoutY="89.0" prefHeight="245.0" prefWidth="771.0" />
+</AnchorPane>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox fx:id="xpCmdshellContainer" prefWidth="180" prefHeight="180"
+      style="-fx-background-color: #1e1e1e; -fx-padding: 5px;"
+      xmlns="http://javafx.com/javafx/19"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.ning.Controller.shellController">
+
+    <!-- 终端输出区域 -->
+    <TextArea fx:id="terminalOutput"
+              prefWidth="170" prefHeight="450"
+              style="-fx-control-inner-background: #1e1e1e; -fx-text-fill: #00ff00;"
+              editable="false" wrapText="true">
+        <font>
+            <Font name="Consolas" size="12" />
+        </font>
+    </TextArea>
+
+    <!-- 命令输入区域 -->
+    <HBox alignment="CENTER_LEFT" spacing="5" style="-fx-padding: 0 0 0 5px;">
+        <Label text="Command:>"
+               textFill="#00ff00">
+            <font>
+                <Font name="Consolas" size="12" />
+            </font>
+        </Label>
+
+        <TextField fx:id="commandInput"
+                   prefWidth="600"
+                   style="-fx-background-color: #1e1e1e; -fx-text-fill: #00ff00;"
+                   promptText="输入命令...">
+            <font>
+                <Font name="Consolas" size="12" />
+            </font>
+        </TextField>
+    </HBox>
+</VBox>
