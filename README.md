@@ -17,8 +17,10 @@ dbMonitor是一款在渗透测试中获得数据库高权限（dba）账户后�
 4、UDF提权
 
 5、CLR绕过杀软一键上线CS（具有时效性，如果不免杀了可以issue下）
+![](image.png)
+![](ca0142d0a3d4f59e2ab51ae65a3d697.png)
 
-
+![](284af3cf13c6f783a1ce80454875957.png)
 
 使用方法如下：
 
